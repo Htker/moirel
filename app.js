@@ -761,7 +761,6 @@ function initFinal(){
       }
     });
   });
-<<<<<<< HEAD
 
   // Add a button to let the user "replay as if it's the first time"
   // This clears the unlock flag and reloads the page so `boot()` runs fresh.
@@ -781,8 +780,7 @@ function initFinal(){
     msgEl.appendChild(replayBtn);
   }
   replayBtn.addEventListener('click', () => resetToFirstTime());
-=======
->>>>>>> 14594bc (first commit)
+
 }
 function startConfetti(){
   const canvas=document.getElementById('confetti-canvas'),ctx=canvas.getContext('2d');
@@ -811,7 +809,6 @@ function autoPlayMusic(){const a=document.getElementById('bg-music');a.volume=.2
 function toggleMusic(){const a=document.getElementById('bg-music'),b=document.getElementById('music-btn');if(musicOn){a.pause();musicOn=false;b.textContent='🎵 Musique';}else{a.play();musicOn=true;b.textContent='🔇 Couper';}}
 
 
-<<<<<<< HEAD
 // Reset the experience to "first time" by clearing the unlock flag and reloading.
 function resetToFirstTime(){
   try{ localStorage.removeItem(LS_UNLOCKED); }catch(_){ }
@@ -822,10 +819,6 @@ function resetToFirstTime(){
   // Reload to ensure `boot()` runs and the app starts as if first opened
   setTimeout(()=>{ location.reload(); }, 80);
 }
-
-
-=======
->>>>>>> 14594bc (first commit)
 
 function goDev(n){
   const pages = [
