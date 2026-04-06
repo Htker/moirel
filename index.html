@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>💖 Une Surprise Pour Toi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════════════
+       PAGE 0 — COMPTE À REBOURS
+       Visible avant le 05/05/2026 00:00
+       Cachée définitivement une fois le jour J atteint
+       (mémorisé dans localStorage)
+  ════════════════════════════════════════════════════ -->
+  <section id="page-countdown">
+
+    <!-- Particules étoiles canvas -->
+    <canvas id="cd-stars-canvas"></canvas>
+
+    <!-- Floating love emojis -->
+    <div id="cd-floats" aria-hidden="true"></div>
+
+    <!-- Contenu principal -->
+    <div id="cd-inner">
+
+      <!-- En-tête -->
+      <div id="cd-header">
+        <div id="cd-heart-anim">💖</div>
+        <h1 id="cd-main-title">Une surprise t'attend…</h1>
+        <p id="cd-subtitle">Quelque chose de spécial est en préparation rien que pour toi 🌸</p>
+      </div>
+
+      <!-- Blocs de décompte -->
+      <div id="cd-blocks">
+        <div class="cd-block">
+          <span class="cd-val" id="cd-days">00</span>
+          <span class="cd-unit">Jours</span>
+        </div>
+        <div class="cd-sep">:</div>
+        <div class="cd-block">
+          <span class="cd-val" id="cd-hours">00</span>
+          <span class="cd-unit">Heures</span>
+        </div>
+        <div class="cd-sep">:</div>
+        <div class="cd-block">
+          <span class="cd-val" id="cd-minutes">00</span>
+          <span class="cd-unit">Minutes</span>
+        </div>
+        <div class="cd-sep">:</div>
+        <div class="cd-block">
+          <span class="cd-val" id="cd-seconds">00</span>
+          <span class="cd-unit">Secondes</span>
+        </div>
+      </div>
+
+      <!-- Message d'amour du jour (change toutes les 24h) -->
+      <div id="cd-love-card">
+        <span id="cd-love-icon">💌</span>
+        <p id="cd-love-day-label">Message du jour</p>
+        <p id="cd-love-text">…</p>
+        <div id="cd-love-next">Prochain message dans <span id="cd-love-timer">--:--:--</span></div>
+      </div>
+
+      <!-- Note de bas de page -->
+      <p id="cd-footer-note">
+        ✨ Patience… la plus belle des surprises te réserve bien des merveilles ✨
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       EXPLOSION D'OUVERTURE (overlay qui couvre tout au jour J)
+  ════════════════════════════════════════════════════ -->
+  <div id="unlock-explosion" class="hidden">
+    <canvas id="unlock-confetti"></canvas>
+    <div id="unlock-msg">
+      <div id="unlock-heart">💖</div>
+      <h2 id="unlock-title">C'est le grand jour !</h2>
+      <p id="unlock-body">Ton aventure commence maintenant… 🌟</p>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════
+       BARRE DE PROGRESSION (masquée pendant le décompte)
+  ════════════════════════════════════════════════════ -->
+  <div id="progress-bar-container" class="hidden">
+    <div id="progress-track"><div id="progress-fill"></div></div>
+    <div id="progress-steps">
+      <div class="step-dot active" data-n="1"><span class="dot-icon">🧩</span><span class="dot-label">Puzzle</span></div>
+      <div class="step-dot"        data-n="2"><span class="dot-icon">💕</span><span class="dot-label">Amour</span></div>
+      <div class="step-dot"        data-n="3"><span class="dot-icon">🌌</span><span class="dot-label">Galerie</span></div>
+      <div class="step-dot"        data-n="4"><span class="dot-icon">❓</span><span class="dot-label">Quiz</span></div>
+      <div class="step-dot"        data-n="5"><span class="dot-icon">🎉</span><span class="dot-label">Surprise</span></div>
+    </div>
+  </div>
+
+  <!-- Rideau cinématique -->
+  <div id="curtain"><div id="curtain-msg"></div></div>
+
+  <!-- ════════════════════════════════════════════════════
+       PAGE 1 — PUZZLE
+  ════════════════════════════════════════════════════ -->
+  <section id="page-puzzle" class="page">
+    <div class="bg-petals" aria-hidden="true">
+      <span>🌸</span><span>✨</span><span>💮</span>
+      <span>🌷</span><span>🦋</span><span>🌸</span><span>✨</span>
+    </div>
+    <div class="page-inner">
+      <h1 class="title-script anim-in">Une aventure t'attend…</h1>
+      <p class="subtitle anim-in d2">Reconstitue le puzzle pour ouvrir la première porte 🧩</p>
+      <div id="puzzle-wrapper" class="anim-in d3">
+        <div id="puzzle-board"></div>
+        <p class="tray-hint">↓ Pièces à placer ↓</p>
+        <div id="puzzle-tray"></div>
+      </div>
+      <div id="puzzle-success" class="hidden">
+        <div class="success-burst">✨</div>
+        <p class="success-msg">Magnifique ! Tu l'as reconstitué !</p>
+        <button class="btn-next" id="btn-go-2">Ouvrir la suite →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       PAGE 2 — CŒURS
+  ════════════════════════════════════════════════════ -->
+  <section id="page-hearts" class="page">
+    <canvas id="hearts-canvas"></canvas>
+    <div class="page-inner center-v">
+      <div id="heart-message-box">
+        <span class="big-heart">❤️</span>
+        <h2 class="title-script">Tu es ma lumière</h2>
+        <p class="love-text">
+          Chaque journée avec toi est un cadeau précieux.<br/>
+          Aujourd'hui c'est <em>ton</em> jour — et je veux<br/>
+          que tu te sentes aussi spéciale que tu l'es vraiment.
+        </p>
+        <button class="btn-next" id="btn-go-3">Continuer →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       PAGE 3 — GALERIE GALAXIE
+  ════════════════════════════════════════════════════ -->
+  <section id="page-gallery" class="page">
+    <canvas id="galaxy-bg"></canvas>
+    <button class="btn-gallery-skip hidden" id="btn-go-4">Continuer l'aventure →</button>
+    <div class="gallery-page-inner">
+      <div class="gallery-header anim-in">
+        <h2 class="title-script gallery-title">Notre Galaxie de Souvenirs 🌌</h2>
+        <p class="gallery-sub">Fais tourner le globe · Clique sur une photo pour la voir 💫</p>
+      </div>
+      <div id="globe-scene" class="anim-in d2">
+        <div id="globe-viewport">
+          <div id="globe-sphere"></div>
+        </div>
+        <div id="globe-shine" aria-hidden="true"></div>
+      </div>
+      <p class="gallery-hint anim-in d3">↔ Glisse pour pivoter</p>
+    </div>
+    <div id="lightbox" class="hidden" role="dialog" aria-modal="true">
+      <div id="lb-backdrop"></div>
+      <div id="lb-panel">
+        <button id="lb-close" aria-label="Fermer">✕</button>
+        <div id="lb-media-col">
+          <div id="lb-media-wrap"></div>
+          <p id="lb-caption"></p>
+        </div>
+        <div id="lb-divider" aria-hidden="true"><span class="div-heart">💖</span></div>
+        <div id="lb-love-col">
+          <div id="lb-love-inner">
+            <span class="lb-love-icon"></span>
+            <p id="lb-love-title"></p>
+            <p id="lb-love-body"></p>
+            <div class="lb-love-deco" aria-hidden="true">✨ 💕 ✨</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       PAGE 4 — QUIZ
+  ════════════════════════════════════════════════════ -->
+  <section id="page-quiz" class="page">
+    <div class="bg-stars" aria-hidden="true">
+      <span>⭐</span><span>💫</span><span>🌟</span>
+      <span>✨</span><span>⭐</span><span>💫</span>
+    </div>
+    <div class="page-inner center-v">
+      <h2 class="title-script anim-in">La preuve que je te connais 😏</h2>
+      <div id="quiz-dots" class="anim-in d2"></div>
+      <div id="quiz-card" class="anim-in d3">
+        <p id="quiz-question"></p>
+        <div id="quiz-options"></div>
+        <div id="quiz-feedback" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       PAGE 5 — FINALE
+  ════════════════════════════════════════════════════ -->
+  <section id="page-final" class="page">
+    <canvas id="confetti-canvas"></canvas>
+    <div class="page-inner center-v">
+      <div id="countdown-wrap">
+        <p class="countdown-hint">Le message arrive dans…</p>
+        <div id="countdown-ring">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="60" r="52" id="ring-track"/>
+            <circle cx="60" cy="60" r="52" id="ring-fill"/>
+          </svg>
+          <span id="countdown-num">3</span>
+        </div>
+      </div>
+      <div id="final-message" class="hidden">
+        <h1 class="title-script final-title">Joyeux Anniversaire !</h1>
+        <p class="final-text">
+          🎂 Une année de plus, et tu es encore plus incroyable.<br/>
+          Que cette journée soit remplie de joie, de rires<br/>
+          et de tout ce que ton cœur désire.<br/><br/>
+          Je t'aime Moirel. 💖
+        </p>
+        <div class="firework-row" aria-hidden="true">🎆🎇✨🎉🎊💫🌟</div>
+        <div class="final-btns">
+          <button class="btn-next btn-music" id="music-btn" onclick="toggleMusic()">🎵 Musique</button>
+          <button class="btn-next btn-replay" onclick="startAdventure()">🌟 Revivre l'aventure</button>
+        </div>
+      </div>
+    </div>
+    <audio id="bg-music" loop>
+      <source src="music.mp3" type="audio/mpeg"/>
+    </audio>
+  </section>
+
+  <script src="app.js"></script>
+
+
+
+  <div style="position:fixed;bottom:20px;right:20px;z-index:9999">
+<button onclick="goDev(1)">1</button>
+<button onclick="goDev(2)">2</button>
+<button onclick="goDev(3)">3</button>
+<button onclick="goDev(4)">4</button>
+<button onclick="goDev(5)">5</button>
+</div><div style="position:fixed;bottom:20px;right:20px;z-index:9999">
+<button onclick="goDev(1)">1</button>
+<button onclick="goDev(2)">2</button>
+<button onclick="goDev(3)">3</button>
+<button onclick="goDev(4)">4</button>
+<button onclick="goDev(5)">5</button>
+</div>
+
+
+
+</body>
+</html>
