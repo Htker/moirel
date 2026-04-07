@@ -574,24 +574,36 @@ function buildWhirlyWall(){
       const thumb=document.createElement('div');
       thumb.className='whirly-thumb';
 
-      const src = media.type==='video' ? (media.thumb||media.src) : media.src;
-      const img=document.createElement('img');
-      img.src=src; img.alt=media.caption||'';
-      img.loading='lazy';
-      img.style.width='100%'; img.style.height='100%'; img.style.objectFit='cover';
+      let mediaEl;
+      if(media.type==='video'){
+        mediaEl=document.createElement('video');
+        mediaEl.src=media.src;
+        mediaEl.muted=true;
+        mediaEl.autoplay=true;
+        mediaEl.loop=true;
+        mediaEl.playsInline=true;
+        mediaEl.preload='metadata';
+        mediaEl.style.width='100%'; mediaEl.style.height='100%'; mediaEl.style.objectFit='cover';
+      } else {
+        mediaEl=document.createElement('img');
+        mediaEl.src=media.src;
+        mediaEl.alt=media.caption||'';
+        mediaEl.loading='lazy';
+        mediaEl.style.width='100%'; mediaEl.style.height='100%'; mediaEl.style.objectFit='cover';
+      }
 
       // Placeholder coloré en cas d'erreur
       const PLACEHOLDER_COLORS=['#f06b8b','#e8b86d','#8b5cf6','#10b981','#f472b6','#60a5fa','#fbbf24','#a78bfa'];
-      img.onerror=()=>{
+      mediaEl.onerror=()=>{
         thumb.style.background=PLACEHOLDER_COLORS[idx%PLACEHOLDER_COLORS.length];
-        img.style.display='none';
+        mediaEl.style.display='none';
         const lbl=document.createElement('div');
         lbl.style.cssText='color:#fff;font-size:.7rem;padding:8px;text-align:center;position:absolute;bottom:0;left:0;right:0;';
         lbl.textContent=media.caption||'';
         thumb.appendChild(lbl);
       };
 
-      thumb.appendChild(img);
+      thumb.appendChild(mediaEl);
 
       // Badge vidéo
       if(media.type==='video'){
