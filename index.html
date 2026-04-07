@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>💖 Une Surprise Pour Toi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:ital,wght@600;700&family=Lato:wght@300;400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -153,16 +154,15 @@
     <button class="btn-gallery-skip hidden" id="btn-go-4">Continuer l'aventure →</button>
     <div class="gallery-page-inner">
       <div class="gallery-header anim-in">
-        <h2 class="title-script gallery-title">Notre Galaxie de Souvenirs 🌌</h2>
-        <p class="gallery-sub">Fais tourner le globe · Clique sur une photo pour la voir 💫</p>
+        <h2 class="title-script gallery-title">Notre Galerie Spirale de Souvenirs 🌀</h2>
+        <p class="gallery-sub">Parcours la spirale de souvenirs · Clique sur une carte pour l'ouvrir 💫</p>
       </div>
-      <div id="globe-scene" class="anim-in d2">
-        <div id="globe-viewport">
-          <div id="globe-sphere"></div>
-        </div>
-        <div id="globe-shine" aria-hidden="true"></div>
+      <div id="spiral-scene" class="anim-in d2">
+        <div id="spiral-frame"></div>
+        <div id="spiral-glow" aria-hidden="true"></div>
       </div>
       <p class="gallery-hint anim-in d3">↔ Glisse pour pivoter</p>
+      <div id="spiral-scroll"></div>
     </div>
     <div id="lightbox" class="hidden" role="dialog" aria-modal="true">
       <div id="lb-backdrop"></div>

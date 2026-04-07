@@ -96,44 +96,28 @@ const MEDIA = [
     love:{ icon:'🌸', title:'Ce sourire qui illumine tout', body:'Quand tu souris, le monde entier devient plus beau. Ton sourire est mon endroit préféré au monde.' }},
   { type:'image', src:'photos/photo5.jpg', caption:'Ensemble, toujours 💑',
     love:{ icon:'💑', title:'Toi & moi, pour toujours', body:'Chaque photo ensemble est une preuve que le bonheur existe vraiment. Et il ressemble à toi.' }},
-  { type:'video', src:'videos/video1.mp4', thumb:'photos/thumb1.jpg', caption:'Notre petit film à nous 🎬',
+  { type:'video', src:'videos/video1.mp4', thumb:'photos/photo1.jpg', caption:'Notre petit film à nous 🎬',
     love:{ icon:'🎬', title:'Notre histoire en images', body:'Si notre vie était un film, je voudrais qu\'il dure une éternité. Et toi, tu en serais la plus belle scène.' }},
-  { type:'image', src:'photos/photo6.jpg', caption:'Ce moment magique ✨',
-    love:{ icon:'✨', title:'La magie de toi', body:'Tu as cette façon unique de rendre les moments ordinaires extraordinaires. Tu es ma magie de tous les jours.' }},
-  { type:'image', src:'photos/photo7.jpg', caption:'Souvenirs de fête 🎉',
-    love:{ icon:'🎉', title:'Fêter la vie avec toi', body:'Chaque celebration est plus belle parce que tu es là. Tu es la meilleure raison de célébrer.' }},
-  { type:'video', src:'videos/video2.mp4', thumb:'photos/thumb2.jpg', caption:'Trop drôle 🤣',
+  { type:'video', src:'videos/video2.mp4', thumb:'photos/photo2.jpg', caption:'Trop drôle 🤣',
     love:{ icon:'🤣', title:'Rire avec toi', body:'Avec toi, même les moments les plus banals deviennent des souvenirs qu\'on n\'oubliera jamais.' }},
-  { type:'image', src:'photos/photo8.jpg', caption:'Le bonheur à l\'état pur 💛',
-    love:{ icon:'💛', title:'Tu es mon bonheur', body:'Le bonheur n\'est pas un endroit. C\'est une personne. Et cette personne, c\'est toi.' }},
-  { type:'image', src:'photos/photo9.jpg', caption:'Câlins forever 🤗',
-    love:{ icon:'🤗', title:'Dans tes bras', body:'Il n\'y a nulle part au monde où je me sente aussi bien que dans tes bras. C\'est là que je suis chez moi.' }},
-  { type:'image', src:'photos/photo10.jpg', caption:'Un coucher de soleil 🌅',
-    love:{ icon:'🌅', title:'Chaque coucher de soleil', body:'Peu importe combien de couchers de soleil je verrai dans ma vie, je veux les voir tous avec toi.' }},
-  { type:'video', src:'videos/video3.mp4', thumb:'photos/thumb3.jpg', caption:'Nos aventures ensemble 🏕️',
+  { type:'video', src:'videos/video3.mp4', thumb:'photos/photo3.jpg', caption:'Nos aventures ensemble 🏕️',
     love:{ icon:'🏕️', title:'Chaque aventure avec toi', body:'Que ce soit sur une montagne ou dans une simple forêt, chaque moment est une aventure quand tu es là.' }},
-  { type:'video', src:'videos/video4.mp4', thumb:'photos/thumb4.jpg', caption:'Danser sous les étoiles 💃',
+  { type:'video', src:'videos/video4.mp4', thumb:'photos/photo4.jpg', caption:'Danser sous les étoiles 💃',
     love:{ icon:'💃', title:'Danser avec toi', body:'J\'aime danser avec toi, même sans musique. Juste le bruit de nos cœurs qui battent ensemble.' }},
-  { type:'video', src:'videos/video5.mp4', thumb:'photos/thumb5.jpg', caption:'Petit-déjeuner surprise ☕',
+  { type:'video', src:'videos/video5.mp4', thumb:'photos/photo5.jpg', caption:'Petit-déjeuner surprise ☕',
     love:{ icon:'☕', title:'Les matins avec toi', body:'Chaque matin commence par le plus beau sourire du monde. Le tien.' }},
-  { type:'video', src:'videos/video6.mp4', thumb:'photos/thumb6.jpg', caption:'Plage et coucher de soleil 🏖️',
+  { type:'video', src:'videos/video6.mp4', thumb:'photos/photo1.jpg', caption:'Plage et coucher de soleil 🏖️',
     love:{ icon:'🏖️', title:'Plage & toi = Paradis', body:'Avec toi, même la plage devient un endroit magique. Tu es mon île déserte préférée.' }},
-  { type:'video', src:'videos/video7.mp4', thumb:'photos/thumb7.jpg', caption:'Karaoke en folie 🎤',
+  { type:'video', src:'videos/video7.mp4', thumb:'photos/photo2.jpg', caption:'Karaoke en folie 🎤',
     love:{ icon:'🎤', title:'Chanter avec toi', body:'Tes fausses notes sont la plus belle musique de ma vie. Je t\'aime exactement comme tu es.' }},
-  { type:'video', src:'videos/video8.mp4', thumb:'photos/thumb8.jpg', caption:'Cuisine maison 👨‍🍳',
+  { type:'video', src:'videos/video8.mp4', thumb:'photos/photo3.jpg', caption:'Cuisine maison 👨‍🍳',
     love:{ icon:'👨‍🍳', title:'Cuisiner pour toi', body:'Chaque plat est un acte d\'amour. Je cuisine ton bonheur.' }},
-  { type:'video', src:'videos/video9.mp4', thumb:'photos/thumb9.jpg', caption:'Pique-nique sous l\'arbre 🌳',
+  { type:'video', src:'videos/video9.mp4', thumb:'photos/photo4.jpg', caption:'Pique-nique sous l\'arbre 🌳',
     love:{ icon:'🌳', title:'Moments simples, amour infini', body:'Les plus beaux moments sont souvent les plus simples. Juste toi, moi, et l\'amour entre nous.' }},
-  { type:'video', src:'videos/video10.mp4', thumb:'photos/thumb10.jpg', caption:'Nuit étoilée 🌟',
+  { type:'video', src:'videos/video10.mp4', thumb:'photos/photo5.jpg', caption:'Nuit étoilée 🌟',
     love:{ icon:'🌟', title:'Compter les étoiles avec toi', body:'Chaque étoile du ciel pâlit comparée à la lumière que tu apportes dans ma vie.' }},
-  { type:'video', src:'videos/video11.mp4', thumb:'photos/thumb11.jpg', caption:'Promenade main dans la main 🚶',
-    love:{ icon:'🚶', title:'Marcher avec toi', body:'Peu importe où on va, du moment que c\'est avec toi, je suis chez moi.' }},
-  { type:'video', src:'videos/video12.mp4', thumb:'photos/thumb12.jpg', caption:'Moment tendresse 💕',
-    love:{ icon:'💕', title:'Tes yeux, mon univers', body:'Quand tu me regardes comme ça, je comprends que l\'amour existe vraiment.' }},
-  { type:'video', src:'videos/video13.mp4', thumb:'photos/thumb13.jpg', caption:'Rire ensemble 😄',
-    love:{ icon:'😄', title:'Notre rire à nous', body:'Avec toi, je ris plus fort, j\'aime plus fort, je vis plus intensément.' }},
-  { type:'video', src:'videos/video14.mp4', thumb:'photos/thumb14.jpg', caption:'Soirée cinéma cosy 🎬',
-    love:{ icon:'🎬', title:'Les soirs avec toi', body:'Je préfère un film ordinaire avec toi que le plus grand spectacle sans toi.' }},
+  { type:'video', src:'videos/video11.mp4', thumb:'photos/photo1.jpg', caption:'Promenade main dans la main 🚶',
+    love:{ icon:'🚶', title:'Marcher avec toi', body:'Peu importe où on va, du moment que c\'est avec toi, je suis chez moi.' }}
 ];
 
 const PLACEHOLDER_COLORS = ['#f06b8b','#e8b86d','#8b5cf6','#10b981','#f472b6','#60a5fa','#fbbf24','#a78bfa','#34d399','#fb7185','#38bdf8','#c084fc'];
@@ -451,7 +435,7 @@ function startAdventure() {
 // const PUZZLE_EMOJIS=['🌸','💖','🌷','✨','🎂','🦋','💐','🌟','🎀'];
 // const GRID=3; // 3x3 = 9 pieces
 const PUZZLE_IMAGE = "photos/puzzle.png";
-const GRID = 3; 
+const GRID = 2; 
 
 let piecesPlaced=0;
 let puzzleBuilt=false;
@@ -622,13 +606,15 @@ function initHearts(){
 /* ═══════════════════════════════════════════════════════════════
    4. PAGE 3 — GALERIE GALAXIE
 ═══════════════════════════════════════════════════════════════ */
-let galleryDone=false,globeRotX=18,globeRotY=0,globeAutoAnim;
+let galleryDone=false;
+let spiralCards=[];
+let spiralRAF=null;
 function initGallery(){
   if(galleryDone)return;galleryDone=true;
   const skipBtn=document.getElementById('btn-go-4');
   skipBtn.classList.remove('hidden');
-  initStarsBg(); buildGlobe(); initGlobeDrag(); startGlobeAutoRotate();
-  skipBtn.addEventListener('click',()=>{cancelAnimationFrame(globeAutoAnim);closeLightbox();goTo(4);});
+  initStarsBg(); buildSpiral(); setupSpiralScroll();
+  skipBtn.addEventListener('click',()=>{closeLightbox();goTo(4);});
 }
 function initStarsBg(){
   const canvas=document.getElementById('galaxy-bg'),ctx=canvas.getContext('2d');
@@ -636,34 +622,128 @@ function initStarsBg(){
   function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);for(let i=0;i<300;i++){const x=Math.random()*canvas.width,y=Math.random()*canvas.height,r=Math.random()*1.7+.2,a=Math.random()*.9+.1;ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fillStyle=`rgba(255,255,255,${a})`;ctx.fill();}[{cx:.2,cy:.3,r:200,c:'rgba(90,40,180,.07)'},{cx:.75,cy:.6,r:220,c:'rgba(200,50,120,.055)'},{cx:.5,cy:.8,r:170,c:'rgba(40,80,200,.05)'}].forEach(n=>{const g=ctx.createRadialGradient(n.cx*canvas.width,n.cy*canvas.height,0,n.cx*canvas.width,n.cy*canvas.height,n.r);g.addColorStop(0,n.c);g.addColorStop(1,'transparent');ctx.fillStyle=g;ctx.fillRect(0,0,canvas.width,canvas.height);});}
   resize();window.addEventListener('resize',resize);
 }
-function buildGlobe(){
-  const sphere=document.getElementById('globe-sphere'),scene=document.getElementById('globe-scene');
-  const RADIUS=scene.offsetWidth/2*.8,N=MEDIA.length,GA=Math.PI*(3-Math.sqrt(5));
-  MEDIA.forEach((media,i)=>{
-    const yN=1-(i/(N-1))*2,rN=Math.sqrt(1-yN*yN),theta=GA*i;
-    const node=document.createElement('div');node.className='globe-node';if(media.type==='video')node.classList.add('is-video');
-    if(media.type==='video'&&media.thumb){const img=document.createElement('img');img.src=media.thumb;img.alt='';node.appendChild(img);}
-    else if(media.type==='image'){const img=document.createElement('img');img.src=media.src;img.alt='';img.onerror=()=>{img.style.display='none';node.style.background=PLACEHOLDER_COLORS[i%PLACEHOLDER_COLORS.length];};node.appendChild(img);}
-    else{node.style.background=PLACEHOLDER_COLORS[i%PLACEHOLDER_COLORS.length];}
-    node.style.transform=`translate3d(${Math.cos(theta)*rN*RADIUS}px,${yN*RADIUS}px,${Math.sin(theta)*rN*RADIUS}px)`;
-    node.addEventListener('click',()=>openLightbox(media));
-    node.setAttribute('tabindex','0');node.setAttribute('role','button');node.setAttribute('aria-label',media.caption||`Photo ${i+1}`);
-    node.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')openLightbox(media);});
-    sphere.appendChild(node);
+function buildSpiral(){
+  const scene = document.getElementById('spiral-scene');
+  const frame = document.getElementById('spiral-frame');
+  
+  if (!scene || !frame) {
+    console.error('spiral-scene or spiral-frame not found');
+    return;
+  }
+  
+  frame.innerHTML = '';
+  spiralCards = [];
+  
+  // Get scene dimensions with proper fallback
+  let w = scene.offsetWidth;
+  let h = scene.offsetHeight;
+  
+  // If still zero (element not rendered yet), use computed style
+  if (w === 0 || h === 0) {
+    const computed = getComputedStyle(scene);
+    w = parseFloat(computed.width) || 380;
+    h = parseFloat(computed.height) || 380;
+  }
+  
+  const cx = w / 2;
+  const cy = h / 2;
+  const maxRadius = Math.min(w, h) * 0.42;
+  MEDIA.forEach((media, i) => {
+    const base = i / MEDIA.length;
+    const angle = base * Math.PI * 5.2 + Math.PI * .8;
+    const radius = 36 + base * maxRadius;
+    const x = cx + Math.cos(angle) * radius;
+    const y = cy + Math.sin(angle) * radius;
+    const card = document.createElement('button');
+    card.type = 'button';
+    card.className = 'spiral-card';
+    card.style.left = `${x}px`;
+    card.style.top = `${y}px`;
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'button');
+    card.setAttribute('aria-label', media.caption || `Souvenir ${i+1}`);
+    if (media.type === 'video') card.classList.add('is-video');
+    const img = document.createElement('img');
+    img.src = media.type === 'video' && media.thumb ? media.thumb : media.src;
+    img.alt = media.caption || '';
+    img.loading = 'lazy';
+    img.onerror = () => { img.style.display = 'none'; card.style.background = PLACEHOLDER_COLORS[i % PLACEHOLDER_COLORS.length]; };
+    card.appendChild(img);
+    const title = document.createElement('div');
+    title.className = 'card-title';
+    title.textContent = media.caption || 'Souvenir précieux';
+    const subtitle = document.createElement('span');
+    subtitle.textContent = media.type === 'video' ? 'Vidéo' : 'Photo';
+    title.appendChild(subtitle);
+    card.appendChild(title);
+    card.addEventListener('click', () => openLightbox(media));
+    card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openLightbox(media); });
+    frame.appendChild(card);
+    spiralCards.push(card);
   });
-  [[RADIUS*.95,8,25],[RADIUS*.72,-18,58],[RADIUS*.55,52,80]].forEach(([r,rx,ry])=>{const ring=document.createElement('div');ring.className='globe-orbit-ring';ring.style.cssText=`width:${r*2}px;height:${r*2}px;margin-left:-${r}px;margin-top:-${r}px;transform:rotateX(${rx}deg) rotateY(${ry}deg);`;sphere.appendChild(ring);});
+  renderSpiral(0);
 }
-function applyGlobeRotation(){document.getElementById('globe-sphere').style.transform=`rotateX(${globeRotX}deg) rotateY(${globeRotY}deg)`;}
-function startGlobeAutoRotate(){let last=0;function step(ts){if(!isDragging){const dt=ts-last;if(dt>16){globeRotY+=.28;globeRotX=18+Math.sin(ts*.0004)*8;last=ts;applyGlobeRotation();}}globeAutoAnim=requestAnimationFrame(step);}globeAutoAnim=requestAnimationFrame(step);}
-let isDragging=false,dragStart={x:0,y:0,rx:0,ry:0};
-function initGlobeDrag(){
-  const scene=document.getElementById('globe-scene');
-  scene.addEventListener('mousedown',e=>{isDragging=true;dragStart={x:e.clientX,y:e.clientY,rx:globeRotX,ry:globeRotY};e.preventDefault();});
-  window.addEventListener('mousemove',e=>{if(!isDragging)return;globeRotY=dragStart.ry+(e.clientX-dragStart.x)*.55;globeRotX=Math.max(-65,Math.min(65,dragStart.rx-(e.clientY-dragStart.y)*.55));applyGlobeRotation();});
-  window.addEventListener('mouseup',()=>isDragging=false);
-  scene.addEventListener('touchstart',e=>{isDragging=true;const t=e.touches[0];dragStart={x:t.clientX,y:t.clientY,rx:globeRotX,ry:globeRotY};},{passive:true});
-  scene.addEventListener('touchmove',e=>{if(!isDragging)return;const t=e.touches[0];globeRotY=dragStart.ry+(t.clientX-dragStart.x)*.55;globeRotX=Math.max(-65,Math.min(65,dragStart.rx-(t.clientY-dragStart.y)*.55));applyGlobeRotation();e.preventDefault();},{passive:false});
-  scene.addEventListener('touchend',()=>isDragging=false);
+function setupSpiralScroll(){
+  const page = document.getElementById('page-gallery');
+  page.scrollTop = 0;
+  page.addEventListener('scroll', () => {
+    if (!spiralRAF) {
+      spiralRAF = requestAnimationFrame(() => {
+        renderSpiral(page.scrollTop);
+        spiralRAF = null;
+      });
+    }
+  });
+  window.addEventListener('resize', () => {
+    if (spiralRAF === null) {
+      spiralRAF = requestAnimationFrame(() => {
+        renderSpiral(page.scrollTop);
+        spiralRAF = null;
+      });
+    }
+  });
+}
+function renderSpiral(scrollTop){
+  const scene = document.getElementById('spiral-scene');
+  
+  if (!scene) return;
+  
+  // Get dimensions with proper fallback
+  let w = scene.offsetWidth;
+  let h = scene.offsetHeight;
+  
+  // If still zero, use computed style
+  if (w === 0 || h === 0) {
+    const computed = getComputedStyle(scene);
+    w = parseFloat(computed.width) || 380;
+    h = parseFloat(computed.height) || 380;
+  }
+  
+  const cx = w / 2;
+  const cy = h / 2;
+  const maxRadius = Math.min(w, h) * 0.42;
+  const page = document.getElementById('page-gallery');
+  const maxScroll = page.scrollHeight - page.clientHeight;
+  const progress = maxScroll > 0 ? page.scrollTop / maxScroll : 0;
+  const spin = progress * Math.PI * 1.45;
+  const count = spiralCards.length || 1;
+  spiralCards.forEach((card, i) => {
+    const base = i / count;
+    const t = (base + progress * 0.95) % 1;
+    const angle = t * Math.PI * 5.2 + spin;
+    const radius = 36 + t * maxRadius;
+    const x = cx + Math.cos(angle) * radius;
+    const y = cy + Math.sin(angle) * radius;
+    const focus = 1 - Math.min(1, Math.abs(t - 0.5) * 1.9);
+    const scale = 0.72 + Math.max(0, focus) * 0.82;
+    const opacity = 0.28 + Math.max(0, focus) * 0.72;
+    card.style.transform = `translate(${x}px,${y}px) translate(-50%,-50%) scale(${scale}) rotate(${angle * 0.08}rad)`;
+    card.style.opacity = opacity;
+    card.style.zIndex = Math.round(scale * 100);
+    card.classList.toggle('active', focus > 0.62);
+  });
+  const glow = document.getElementById('spiral-glow');
+  if (glow) glow.style.transform = `translate(-50%,-50%) rotate(${spin * 0.35}rad)`;
 }
 function openLightbox(media){
   const lb=document.getElementById('lightbox'),wrap=document.getElementById('lb-media-wrap'),caption=document.getElementById('lb-caption'),icon=document.querySelector('.lb-love-icon'),title=document.getElementById('lb-love-title'),body=document.getElementById('lb-love-body');
@@ -672,29 +752,16 @@ function openLightbox(media){
   else{const vid=document.createElement('video');vid.src=media.src;vid.controls=true;vid.autoplay=true;vid.playsInline=true;wrap.appendChild(vid);}
   caption.textContent=media.caption||'';
   const love=media.love||{};icon.textContent=love.icon||'💖';title.textContent=love.title||'Un souvenir précieux';body.textContent=love.body||'Ce souvenir est gravé pour toujours dans mon cœur.';
-  lb.classList.remove('hidden');isDragging=true;
+  lb.classList.remove('hidden');
 }
 function closeLightbox(){
   const lb=document.getElementById('lightbox'),wrap=document.getElementById('lb-media-wrap');
   const vid=wrap.querySelector('video');if(vid)vid.pause();
-  lb.classList.add('hidden');wrap.innerHTML='';isDragging=false;
+  lb.classList.add('hidden');wrap.innerHTML='';
 }
 document.getElementById('lb-backdrop').addEventListener('click',closeLightbox);
 document.getElementById('lb-close').addEventListener('click',closeLightbox);
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
-
-
-/* ═══════════════════════════════════════════════════════════════
-   5. PAGE 4 — QUIZ
-═══════════════════════════════════════════════════════════════ */
-const QUESTIONS=[
-  {q:'Couleur préférée ? 🎨',opts:['Bleu 🌊','Rose 🌸','Violet 🔮','Vert 🌿'],ok:0,emoji:'🌸',bravo:'I know.. babe !!'},
-  {q:'Quel est ton plat favori ? 🍽️',opts:['Pâtes  🍝','Sushi 🍣','Attièkè','Burger 🍔'],ok:2,emoji:'🧀',bravo:'Dis moi dès que t as faim'},
-  {q:'Quelle activité te rend heureuse ? ✨',opts:['Voyager ✈️','Lire 📚','Cuisiner 🍳','Danser 💃'],ok:3,emoji:'✈️',bravo:'le retse aussi mais '},
-  {q:"Comment je t'appelle avec le plus d'amour ? 💕",opts:['Moirel 🎐🏮','Mon bébé ❤️','Afi ☀️','Mon amour 💌'],ok:0,emoji:'☀️',bravo:'Mon soleil, parce que tu illumines tout ☀️'},
-];
-let qIndex=0,quizReady=false;
-function initQuiz(){if(quizReady)return;quizReady=true;qIndex=0;renderDots();renderQuestion();}
 function renderDots(){const el=document.getElementById('quiz-dots');el.innerHTML='';QUESTIONS.forEach((_,i)=>{const d=document.createElement('div');d.className='quiz-dot'+(i===qIndex?' current':'');el.appendChild(d);});}
 function updateDots(){document.querySelectorAll('.quiz-dot').forEach((d,i)=>{d.className='quiz-dot';if(i<qIndex)d.classList.add('done');if(i===qIndex)d.classList.add('current');});}
 function renderQuestion(){
@@ -707,20 +774,9 @@ function renderQuestion(){
       const btn=document.createElement('button');
       btn.className='quiz-option';
       btn.textContent=text;
-      // on hover, wrong answers flee slightly
       btn.addEventListener('mousemove',e=>{ if(i!==data.ok) flee(btn,e); });
       btn.addEventListener('mouseleave',()=>{ btn.style.transform=''; btn.style.transition='transform .5s cubic-bezier(.25,.8,.25,1),background .2s,border-color .2s'; });
-      // on click: if wrong, make the button flee; if correct, submit answer
-      btn.addEventListener('click', (e) => {
-        if(i !== data.ok){
-          // stronger flee on click
-          flee(btn, e);
-          // small nudge animation for extra effect
-          btn.style.transition = 'transform .18s ease';
-        } else {
-          answer(btn, i, data.ok, data.bravo);
-        }
-      });
+      btn.addEventListener('click',(e)=>{ if(i!==data.ok){ flee(btn,e); btn.style.transition='transform .18s ease'; } else { answer(btn,i,data.ok,data.bravo);} });
       opts.appendChild(btn);
     });
     card.style.opacity='1';card.style.transform='translateY(0)';
