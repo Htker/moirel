@@ -762,6 +762,28 @@ function closeLightbox(){
 document.getElementById('lb-backdrop').addEventListener('click',closeLightbox);
 document.getElementById('lb-close').addEventListener('click',closeLightbox);
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
+
+
+/* ═══════════════════════════════════════════════════════════════
+   5. PAGE 4 — QUIZ
+═══════════════════════════════════════════════════════════════ */
+const QUESTIONS = [
+  { q: "Quelle est ma couleur préférée ?", opts: ["Bleu", "Rose", "Vert", "Jaune"], ok: 1, emoji: "🎨", bravo: "C'est toi qui dis !" },
+  { q: "Quel est mon film préféré ?", opts: ["Titanic", "Avatar", "Inception", "Interstellar"], ok: 2, emoji: "🎬", bravo: "Exactement !" },
+  { q: "Combien de fois ai-je dit 'je t'aime' cette semaine ?", opts: ["5 fois", "Plus que je ne peux compter", "10 fois", "Chaque jour"], ok: 1, emoji: "💕", bravo: "Bien sûr !" },
+  { q: "Quel est mon lieu préféré avec toi ?", opts: ["Au cinéma", "Partout, tant que tu es là", "À la plage", "En montagne"], ok: 1, emoji: "📍", bravo: "Tu le sais 💕" },
+];
+
+let qIndex = 0;
+let quizDone = false;
+
+function initQuiz(){
+  if(quizDone) return; quizDone = true;
+  qIndex = 0;
+  renderDots();
+  renderQuestion();
+}
+
 function renderDots(){const el=document.getElementById('quiz-dots');el.innerHTML='';QUESTIONS.forEach((_,i)=>{const d=document.createElement('div');d.className='quiz-dot'+(i===qIndex?' current':'');el.appendChild(d);});}
 function updateDots(){document.querySelectorAll('.quiz-dot').forEach((d,i)=>{d.className='quiz-dot';if(i<qIndex)d.classList.add('done');if(i===qIndex)d.classList.add('current');});}
 function renderQuestion(){
