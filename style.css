@@ -396,21 +396,63 @@ body { font-family: var(--font-body); background: #0a0015; color: var(--text); }
  .gallery-title  { color:#fff !important; text-shadow:0 0 18px rgba(220,180,255,.16) !important; letter-spacing:.02em; }
  .gallery-sub    { color:rgba(255,255,255,.65) !important; font-size:1rem; margin-top:8px; letter-spacing:.03em; }
  .gallery-hint   { font-family:'Poppins',sans-serif; font-weight:500; font-size:.95rem; color:rgba(255,255,255,.45); letter-spacing:.08em; text-transform:uppercase; margin-top:6px; }
- #spiral-scene { position:relative; width:min(760px,88vw); height:min(760px,88vw); margin:0 auto; overflow:visible; }
- #spiral-scene:active{cursor:grab}
- #spiral-frame { position:absolute; inset:0; }
- #spiral-glow { position:absolute; inset:20%; border-radius:50%; background:radial-gradient(circle, rgba(146, 60, 255, 0.14), transparent 40%); pointer-events:none; opacity:.85; filter:blur(8px); }
- #spiral-scroll { width:1px; height:260vh; opacity:0; pointer-events:none; }
- .spiral-card { position:absolute; width:220px; height:300px; border-radius:32px; overflow:hidden; border:1px solid rgba(255,255,255,.08); background:#09060f; box-shadow:0 28px 80px rgba(0,0,0,.45),0 0 30px rgba(124, 58, 237, .06); cursor:pointer; transform-origin:center center; transition:transform .25s ease,opacity .25s ease,box-shadow .25s ease; }
- .spiral-card:hover { transform:scale(1.05); box-shadow:0 36px 110px rgba(0,0,0,.5),0 0 40px rgba(147, 51, 255, .22); }
- .spiral-card img { width:100%; height:100%; object-fit:cover; display:block; }
- .spiral-card::before { content:''; position:absolute; inset:0; box-shadow:inset 0 0 35px rgba(255,255,255,.06); pointer-events:none; }
- .spiral-card.active { border-color:rgba(255,255,255,.18); box-shadow:0 36px 120px rgba(0,0,0,.55),0 0 55px rgba(167, 97, 255, .3); }
- .spiral-card.is-video::after { content:'▶'; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:1.35rem; color:rgba(255,255,255,.92); background:rgba(0,0,0,.28); pointer-events:none; }
- .card-title { position:absolute; left:0; right:0; bottom:0; padding:18px 18px 20px; background:linear-gradient(180deg,transparent,rgba(0,0,0,.85)); font-family:'Poppins',sans-serif; font-weight:600; font-size:.98rem; color:#fff; opacity:0; transform:translateY(12px); transition:opacity .25s ease,transform .25s ease; }
- .spiral-card:hover .card-title, .spiral-card.active .card-title { opacity:1; transform:translateY(0); }
- .spiral-card .card-title span { display:block; font-size:.85rem; color:rgba(255,255,255,.6); margin-top:4px; font-weight:400; }
-@keyframes orbitGlow{from{border-color:rgba(180,100,255,.1)}to{border-color:rgba(232,121,249,.3)}}
+.scene {
+  width: 100vw;
+  height: 60vh;
+  perspective: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.carousel {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 25s infinite linear;
+}
+
+.carousel img, .carousel video {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6), 0 0 20px rgba(146, 60, 255, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid rgba(255,255,255,0.1);
+}
+
+.carousel img:hover, .carousel video:hover {
+  transform: scale(1.08) !important;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.8), 0 0 30px rgba(167, 97, 255, 0.5);
+}
+
+.carousel video::after {
+  content: '▶';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: rgba(255,255,255,0.9);
+  background: rgba(0,0,0,0.3);
+  border-radius: 15px;
+  pointer-events: none;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
 
 /* Lightbox */
 #lightbox { position:fixed;inset:0;z-index:700;display:flex;align-items:center;justify-content:center;padding:16px; }

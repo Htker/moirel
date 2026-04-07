@@ -154,15 +154,15 @@
     <button class="btn-gallery-skip hidden" id="btn-go-4">Continuer l'aventure →</button>
     <div class="gallery-page-inner">
       <div class="gallery-header anim-in">
-        <h2 class="title-script gallery-title">Notre Galerie Spirale de Souvenirs 🌀</h2>
-        <p class="gallery-sub">Parcours la spirale de souvenirs · Clique sur une carte pour l'ouvrir 💫</p>
+        <h2 class="title-script gallery-title">Notre Galerie Spirale 3D de Souvenirs 🌀</h2>
+        <p class="gallery-sub">Admire la spirale tournante · Clique sur une image pour l'ouvrir 💫</p>
       </div>
-      <div id="spiral-scene" class="anim-in d2">
-        <div id="spiral-frame"></div>
-        <div id="spiral-glow" aria-hidden="true"></div>
+      <div class="scene anim-in d2">
+        <div class="carousel" id="carousel">
+          <!-- Les images seront ajoutées dynamiquement par JS -->
+        </div>
       </div>
-      <p class="gallery-hint anim-in d3">↔ Glisse pour pivoter</p>
-      <div id="spiral-scroll"></div>
+      <p class="gallery-hint anim-in d3">La spirale tourne automatiquement ✨</p>
     </div>
     <div id="lightbox" class="hidden" role="dialog" aria-modal="true">
       <div id="lb-backdrop"></div>

@@ -607,143 +607,55 @@ function initHearts(){
    4. PAGE 3 — GALERIE GALAXIE
 ═══════════════════════════════════════════════════════════════ */
 let galleryDone=false;
-let spiralCards=[];
-let spiralRAF=null;
 function initGallery(){
   if(galleryDone)return;galleryDone=true;
   const skipBtn=document.getElementById('btn-go-4');
   skipBtn.classList.remove('hidden');
-  initStarsBg(); buildSpiral(); setupSpiralScroll();
+  initStarsBg(); build3DSpiral();
   skipBtn.addEventListener('click',()=>{closeLightbox();goTo(4);});
 }
-function initStarsBg(){
-  const canvas=document.getElementById('galaxy-bg'),ctx=canvas.getContext('2d');
-  function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;draw();}
-  function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);for(let i=0;i<300;i++){const x=Math.random()*canvas.width,y=Math.random()*canvas.height,r=Math.random()*1.7+.2,a=Math.random()*.9+.1;ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fillStyle=`rgba(255,255,255,${a})`;ctx.fill();}[{cx:.2,cy:.3,r:200,c:'rgba(90,40,180,.07)'},{cx:.75,cy:.6,r:220,c:'rgba(200,50,120,.055)'},{cx:.5,cy:.8,r:170,c:'rgba(40,80,200,.05)'}].forEach(n=>{const g=ctx.createRadialGradient(n.cx*canvas.width,n.cy*canvas.height,0,n.cx*canvas.width,n.cy*canvas.height,n.r);g.addColorStop(0,n.c);g.addColorStop(1,'transparent');ctx.fillStyle=g;ctx.fillRect(0,0,canvas.width,canvas.height);});}
-  resize();window.addEventListener('resize',resize);
-}
-function buildSpiral(){
-  const scene = document.getElementById('spiral-scene');
-  const frame = document.getElementById('spiral-frame');
-  
-  if (!scene || !frame) {
-    console.error('spiral-scene or spiral-frame not found');
-    return;
-  }
-  
-  frame.innerHTML = '';
-  spiralCards = [];
-  
-  // Get scene dimensions with proper fallback
-  let w = scene.offsetWidth;
-  let h = scene.offsetHeight;
-  
-  // If still zero (element not rendered yet), use computed style
-  if (w === 0 || h === 0) {
-    const computed = getComputedStyle(scene);
-    w = parseFloat(computed.width) || 380;
-    h = parseFloat(computed.height) || 380;
-  }
-  
-  const cx = w / 2;
-  const cy = h / 2;
-  const maxRadius = Math.min(w, h) * 0.42;
+
+function build3DSpiral(){
+  const carousel = document.getElementById('carousel');
+  carousel.innerHTML = '';
+
+  const total = MEDIA.length;
+  const angle = 360 / total;
+  const radius = 450;
+
   MEDIA.forEach((media, i) => {
-    const base = i / MEDIA.length;
-    const angle = base * Math.PI * 5.2 + Math.PI * .8;
-    const radius = 36 + base * maxRadius;
-    const x = cx + Math.cos(angle) * radius;
-    const y = cy + Math.sin(angle) * radius;
-    const card = document.createElement('button');
-    card.type = 'button';
-    card.className = 'spiral-card';
-    card.style.left = `${x}px`;
-    card.style.top = `${y}px`;
-    card.setAttribute('tabindex', '0');
-    card.setAttribute('role', 'button');
-    card.setAttribute('aria-label', media.caption || `Souvenir ${i+1}`);
-    if (media.type === 'video') card.classList.add('is-video');
-    const img = document.createElement('img');
-    img.src = media.type === 'video' && media.thumb ? media.thumb : media.src;
-    img.alt = media.caption || '';
-    img.loading = 'lazy';
-    img.onerror = () => { img.style.display = 'none'; card.style.background = PLACEHOLDER_COLORS[i % PLACEHOLDER_COLORS.length]; };
-    card.appendChild(img);
-    const title = document.createElement('div');
-    title.className = 'card-title';
-    title.textContent = media.caption || 'Souvenir précieux';
-    const subtitle = document.createElement('span');
-    subtitle.textContent = media.type === 'video' ? 'Vidéo' : 'Photo';
-    title.appendChild(subtitle);
-    card.appendChild(title);
-    card.addEventListener('click', () => openLightbox(media));
-    card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openLightbox(media); });
-    frame.appendChild(card);
-    spiralCards.push(card);
-  });
-  renderSpiral(0);
-}
-function setupSpiralScroll(){
-  const page = document.getElementById('page-gallery');
-  page.scrollTop = 0;
-  page.addEventListener('scroll', () => {
-    if (!spiralRAF) {
-      spiralRAF = requestAnimationFrame(() => {
-        renderSpiral(page.scrollTop);
-        spiralRAF = null;
-      });
+    const rotateY = angle * i;
+    const translateZ = radius;
+    const translateY = i * 15; // effet spiral (monte légèrement)
+
+    let element;
+    if (media.type === 'video') {
+      element = document.createElement('video');
+      element.src = media.src;
+      element.muted = true;
+      element.playsInline = true;
+      element.preload = 'metadata';
+    } else {
+      element = document.createElement('img');
+      element.src = media.src;
+      element.alt = media.caption || '';
+      element.loading = 'lazy';
     }
+
+    element.style.transform = `
+      rotateY(${rotateY}deg)
+      translateZ(${translateZ}px)
+      translateY(${translateY}px)
+    `;
+
+    element.setAttribute('data-media', JSON.stringify(media));
+    element.addEventListener('click', () => {
+      const mediaData = JSON.parse(element.getAttribute('data-media'));
+      openLightbox(mediaData);
+    });
+
+    carousel.appendChild(element);
   });
-  window.addEventListener('resize', () => {
-    if (spiralRAF === null) {
-      spiralRAF = requestAnimationFrame(() => {
-        renderSpiral(page.scrollTop);
-        spiralRAF = null;
-      });
-    }
-  });
-}
-function renderSpiral(scrollTop){
-  const scene = document.getElementById('spiral-scene');
-  
-  if (!scene) return;
-  
-  // Get dimensions with proper fallback
-  let w = scene.offsetWidth;
-  let h = scene.offsetHeight;
-  
-  // If still zero, use computed style
-  if (w === 0 || h === 0) {
-    const computed = getComputedStyle(scene);
-    w = parseFloat(computed.width) || 380;
-    h = parseFloat(computed.height) || 380;
-  }
-  
-  const cx = w / 2;
-  const cy = h / 2;
-  const maxRadius = Math.min(w, h) * 0.42;
-  const page = document.getElementById('page-gallery');
-  const maxScroll = page.scrollHeight - page.clientHeight;
-  const progress = maxScroll > 0 ? page.scrollTop / maxScroll : 0;
-  const spin = progress * Math.PI * 1.45;
-  const count = spiralCards.length || 1;
-  spiralCards.forEach((card, i) => {
-    const base = i / count;
-    const t = (base + progress * 0.95) % 1;
-    const angle = t * Math.PI * 5.2 + spin;
-    const radius = 36 + t * maxRadius;
-    const x = cx + Math.cos(angle) * radius;
-    const y = cy + Math.sin(angle) * radius;
-    const focus = 1 - Math.min(1, Math.abs(t - 0.5) * 1.9);
-    const scale = 0.72 + Math.max(0, focus) * 0.82;
-    const opacity = 0.28 + Math.max(0, focus) * 0.72;
-    card.style.transform = `translate(${x}px,${y}px) translate(-50%,-50%) scale(${scale}) rotate(${angle * 0.08}rad)`;
-    card.style.opacity = opacity;
-    card.style.zIndex = Math.round(scale * 100);
-    card.classList.toggle('active', focus > 0.62);
-  });
-  const glow = document.getElementById('spiral-glow');
-  if (glow) glow.style.transform = `translate(-50%,-50%) rotate(${spin * 0.35}rad)`;
 }
 function openLightbox(media){
   const lb=document.getElementById('lightbox'),wrap=document.getElementById('lb-media-wrap'),caption=document.getElementById('lb-caption'),icon=document.querySelector('.lb-love-icon'),title=document.getElementById('lb-love-title'),body=document.getElementById('lb-love-body');
