@@ -6,8 +6,7 @@
 /* ══════════════════════════════════════════════════════════════
    ██  DATE CIBLE
 ══════════════════════════════════════════════════════════════ */
-// const TARGET_DATE = new Date('2026-05-05T00:00:00'); // ← Décommente pour la vraie date
-const TARGET_DATE = new Date('2020-01-01T00:00:00');   // ← Mode dev : toujours déverrouillé
+const TARGET_DATE = new Date('2026-04-08T11:55:00'); // date cible réelle, mode verrouillé
 
 /* ══════════════════════════════════════════════════════════════
    ██  MESSAGES D'AMOUR QUOTIDIENS
@@ -311,16 +310,18 @@ const LS_UNLOCKED = 'bday_adventure_unlocked_v1';
 
 function boot() {
   try {
-    if (localStorage.getItem(LS_UNLOCKED)) {
+    const now = new Date();
+    const alreadyUnlocked = localStorage.getItem(LS_UNLOCKED);
+    if (alreadyUnlocked && now < TARGET_DATE) {
+      try { localStorage.removeItem(LS_UNLOCKED); } catch (_){ }
+    }
+    if (alreadyUnlocked && now >= TARGET_DATE) {
       hideCdPage();
       showAdventure();
+    } else if (now >= TARGET_DATE) {
+      triggerUnlock();
     } else {
-      const now = new Date();
-      if (now >= TARGET_DATE) {
-        triggerUnlock();
-      } else {
-        initCountdownPage();
-      }
+      initCountdownPage();
     }
   } catch(e) {
     // Si localStorage bloqué (mode privé strict), déverrouiller quand même
