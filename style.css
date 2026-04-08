@@ -611,3 +611,49 @@ body { font-family: var(--font-body); background: #0a0015; color: var(--text); }
   .dot-label { display:none; }
   #cd-love-card { padding:20px 18px; }
 }
+
+@media (max-width: 520px) {
+  html, body { font-size: 14px; }
+  #cd-inner { padding: 18px 14px 34px; }
+  #cd-blocks { gap: 5px; }
+  .cd-block { min-width: 60px; padding: 10px 12px; }
+  .cd-val { font-size: clamp(1.8rem, 5vw, 3.5rem); }
+  .cd-unit { font-size: .68rem; }
+  .cd-sep { font-size: 1.4rem; margin-bottom: 10px; }
+
+  .page-inner, .gallery-page-inner { padding: 18px 14px 50px; }
+  .gallery-header { max-width: 100%; }
+  .gallery-sub { font-size: .86rem; line-height: 1.5; }
+  .gallery-hint { font-size: .78rem; }
+  .scene { height: 38vh; perspective: 680px; }
+  .whirly-thumb { width: 104px; height: 70px; margin-left: -52px; margin-top: -35px; }
+  .whirly-caption { font-size: .7rem; }
+
+  #lightbox { padding: 8px; }
+  #lb-panel { width: 100%; flex-direction: column; max-height: 100vh; }
+  #lb-media-col, #lb-love-col { width: 100%; padding: 16px 14px; }
+  #lb-divider { width: 100%; height: 2px; margin: 10px 0; }
+  #lb-media-wrap img, #lb-media-wrap video { max-height: 40vh; }
+  #lb-love-body { max-width: 100%; }
+
+  #page-puzzle { padding-bottom: 18px; }
+  #puzzle-tray { min-height: 84px; padding: 12px; }
+  .puzzle-piece { width: 60px; height: 60px; }
+  .puzzle-cell { width: 64px; height: 64px; }
+  .tray-hint { font-size: .78rem; }
+
+  #heart-message-box { padding: 24px 18px; }
+  .love-text { font-size: .96rem; }
+
+  #quiz-card { padding: 22px 16px; }
+  #quiz-question { font-size: 1.05rem; }
+  .quiz-option { font-size: .92rem; padding: 10px 16px; }
+  #quiz-feedback { font-size: 1.18rem; }
+
+  #countdown-ring { width: 100px; height: 100px; }
+  #countdown-num { font-size: 3rem; }
+  .final-title { font-size: 2.6rem !important; }
+  .final-text { font-size: .96rem; }
+  .final-btns { gap: 10px; }
+  #final-message { padding: 0 10px; }
+}
