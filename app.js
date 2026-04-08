@@ -548,7 +548,7 @@ function goDev(n) {
    2. PAGE 1 — PUZZLE (1×1 : glisse l'image entière)
 ══════════════════════════════════════════════════════════════ */
 const PUZZLE_IMAGE = 'photos/puzzle.png';
-const GRID = 3; // 3×3 pour un vrai puzzle ; mettre 1 pour juste un clic
+const GRID = 4; // 4×4 pour un vrai puzzle ; mettre 1 pour juste un clic
 
 let piecesPlaced=0, puzzleBuilt=false, placedMap=[], activeDragPiece=null, touchGhost=null;
 
