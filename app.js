@@ -6,16 +6,16 @@
 /* ══════════════════════════════════════════════════════════════
    ██  DATE CIBLE
 ══════════════════════════════════════════════════════════════ */
-const TARGET_DATE = new Date('2026-04-08T11:55:00'); // date cible réelle, mode verrouillé
+const TARGET_DATE = new Date('2026-05-05T00:00:00'); // date cible réelle, mode verrouillé
 
 /* ══════════════════════════════════════════════════════════════
-   ██  MESSAGES D'AMOUR QUOTIDIENS
+   ██  MESSAGES D'AMOUR QUOTIDIENSFilmSeriesZonePremium
 ══════════════════════════════════════════════════════════════ */
 const DAILY_LOVE_MESSAGES = [
   { icon:'🌅', text:'Chaque matin sans toi est un matin de trop. Mais chaque jour qui passe nous rapproche d\'un moment que je prépare avec tout mon amour. Tiens bon, mon soleil.' },
   { icon:'💫', text:'Tu sais ce que je fais quand tu me manques ? Je ferme les yeux et je me souviens de ton sourire. Et là, tout va mieux. Encore quelques jours…' },
   { icon:'🌸', text:'Il y a des personnes rares qui illuminent tout ce qu\'elles touchent. Tu es l\'une d\'elles. Et je suis tellement chanceux·se de t\'avoir dans ma vie.' },
-  { icon:'🎁', text:'Je te prépare quelque chose de spécial. Pas parce que c\'est une obligation, mais parce que tu mérites que chaque anniversaire soit inoubliable. Patience… 🎀' },
+  { icon:'🎁', text:'Je te prépare quelque chosFilmSeriesZonePremiume de spécial. Pas parce que c\'est une obligation, mais parce que tu mérites que chaque anniversaire soit inoubliable. Patience… 🎀' },
   { icon:'🌙', text:'Cette nuit encore, j\'ai pensé à toi. À tous nos fous rires, à tous ces moments précieux. Tu es ma plus belle histoire. Et elle est loin d\'être terminée.' },
   { icon:'❤️', text:'Aimer, c\'est vouloir le meilleur pour l\'autre. Et le meilleur pour toi, c\'est ce que je t\'offre avec tout ce que j\'ai. Bientôt, tu verras.' },
   { icon:'✨', text:'Le compte à rebours continue. Mais sache que même dans l\'attente, chaque seconde vaut la peine d\'être vécue. Tu es ma raison d\'embellir le quotidien.' },
