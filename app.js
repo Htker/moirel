@@ -34,37 +34,37 @@ const DAILY_LOVE_MESSAGES = [
       Mets tes vraies photos dans photos/ et vidéos dans videos/
 ══════════════════════════════════════════════════════════════ */
 const MEDIA = [
-  { type:'image', src:'photos/photo1.jpg', caption:'Notre premier voyage ✈️',
-    love:{ icon:'✈️', title:'Le monde entier avec toi', body:'Ce jour-là, j\'ai compris que peu importe l\'endroit, c\'est toi qui rends chaque lieu magique.' }},
-  { type:'image', src:'photos/photo2.jpg', caption:'Ce fou rire inoubliable 😂',
+  { type:'image', src:'photos/photo1.jpg', caption:'Ombre de l\'amour',
+    love:{ icon:'✈️', title:'Ombre de l\'amour', body:'Ce jour-là, j\'ai compris que peu importe l\'endroit, c\'est toi qui rends chaque lieu magique.' }},
+  { type:'image', src:'photos/photo2.jpg', caption:'La prommesse',
     love:{ icon:'😂', title:'Ton rire, mon rayon de soleil', body:'Il n\'y a pas de mélodie plus douce que ton rire. Je pourrais passer ma vie entière à te faire sourire.' }},
-  { type:'image', src:'photos/photo3.jpg', caption:'Une soirée parfaite 🌙',
+  { type:'image', src:'photos/photo3.jpg', caption:'Une journée parfaite 🌙',
     love:{ icon:'🌙', title:'Les nuits à tes côtés', body:'Ces moments où le temps s\'arrête, où l\'on se regarde sans avoir besoin de parler… ce sont les plus précieux.' }},
   { type:'image', src:'photos/photo4.jpg', caption:'Mon sourire préféré 🌸',
     love:{ icon:'🌸', title:'Ce sourire qui illumine tout', body:'Quand tu souris, le monde entier devient plus beau. Ton sourire est mon endroit préféré au monde.' }},
   { type:'image', src:'photos/photo5.jpg', caption:'Ensemble, toujours 💑',
     love:{ icon:'💑', title:'Toi & moi, pour toujours', body:'Chaque photo ensemble est une preuve que le bonheur existe vraiment. Et il ressemble à toi.' }},
-  { type:'video', src:'videos/video1.mp4', thumb:'photos/photo1.jpg', caption:'Notre petit film à nous 🎬',
+  { type:'video', src:'videos/video1.mp4', thumb:'photos/photo1.jpg', caption:'Nos baisers passionnés, nos sourires complices, nos étreintes tendres et ces instants de pur bonheur partagé',
     love:{ icon:'🎬', title:'Notre histoire en images', body:'Si notre vie était un film, je voudrais qu\'il dure une éternité. Et toi, tu en serais la plus belle scène.' }},
-  { type:'video', src:'videos/video2.mp4', thumb:'photos/photo2.jpg', caption:'Trop drôle 🤣',
+  { type:'video', src:'videos/video2.mp4', thumb:'photos/photo2.jpg', caption:'Un moment de pure comédie romantique, nos danses improvisées, mes pitreries pour te faire rire aux éclats, ton rire qui illumine mon âme',
     love:{ icon:'🤣', title:'Rire avec toi', body:'Avec toi, même les moments les plus banals deviennent des souvenirs qu\'on n\'oubliera jamais.' }},
-  { type:'video', src:'videos/video3.mp4', thumb:'photos/photo3.jpg', caption:'Nos aventures ensemble 🏕️',
+  { type:'video', src:'videos/video3.mp4', thumb:'photos/photo3.jpg', caption:'Nos précieux moments d\'intimité, ensemble dans la douceur de notre amour, partageant ces repas qui nourrissent notre âme et notre cœur',
     love:{ icon:'🏕️', title:'Chaque aventure avec toi', body:'Que ce soit sur une montagne ou dans une simple forêt, chaque moment est une aventure quand tu es là.' }},
-  { type:'video', src:'videos/video4.mp4', thumb:'photos/photo4.jpg', caption:'Danser sous les étoiles 💃',
+  { type:'video', src:'videos/video4.mp4', thumb:'photos/photo4.jpg', caption:'Nos mains qui se cherchent, ce high-five complice, nos doigts entrelacés dans une promesse silencieuse d\'amour éternel',
     love:{ icon:'💃', title:'Danser avec toi', body:'J\'aime danser avec toi, même sans musique. Juste le bruit de nos cœurs qui battent ensemble.' }},
-  { type:'video', src:'videos/video5.mp4', thumb:'photos/photo5.jpg', caption:'Petit-déjeuner surprise ☕',
+  { type:'video', src:'videos/video5.mp4', thumb:'photos/photo5.jpg', caption:'Notre escapade romantique à l\'hôtel, ces moments de passion intense où nos corps et nos âmes s\'unissent dans l\'extase de l\'amour véritable',
     love:{ icon:'☕', title:'Les matins avec toi', body:'Chaque matin commence par le plus beau sourire du monde. Le tien.' }},
-  { type:'video', src:'videos/video6.mp4', thumb:'photos/photo1.jpg', caption:'Plage et coucher de soleil 🏖️',
+  { type:'video', src:'videos/video6.mp4', thumb:'photos/photo1.jpg', caption:'Notre sortie romantique au cinéma, main dans la main, partageant ces émotions cinématographiques qui nous rapprochent encore plus',
     love:{ icon:'🏖️', title:'Plage & toi = Paradis', body:'Avec toi, même la plage devient un endroit magique. Tu es mon île déserte préférée.' }},
-  { type:'video', src:'videos/video7.mp4', thumb:'photos/photo2.jpg', caption:'Karaoke en folie 🎤',
+  { type:'video', src:'videos/video7.mp4', thumb:'photos/photo2.jpg', caption:'Ces câlins tendres et enveloppants, nos corps enlacés dans la chaleur de notre amour, ces moments de pure intimité affective',
     love:{ icon:'🎤', title:'Chanter avec toi', body:'Tes fausses notes sont la plus belle musique de ma vie. Je t\'aime exactement comme tu es.' }},
-  { type:'video', src:'videos/video8.mp4', thumb:'photos/photo3.jpg', caption:'Cuisine maison 👨‍🍳',
+  { type:'video', src:'videos/video8.mp4', thumb:'photos/photo3.jpg', caption:'Notre rendez-vous romantique au cinéma, plongés dans l\'obscurité complice, partageant ces émotions qui nous unissent davantage',
     love:{ icon:'👨‍🍳', title:'Cuisiner pour toi', body:'Chaque plat est un acte d\'amour. Je cuisine ton bonheur.' }},
-  { type:'video', src:'videos/video9.mp4', thumb:'photos/photo4.jpg', caption:'Pique-nique sous l\'arbre 🌳',
+  { type:'video', src:'videos/video9.mp4', thumb:'photos/photo4.jpg', caption:'Ce petit cadeau surprise qui fait briller tes yeux, ces instants de joie pure et de rire partagé qui illuminent notre amour',
     love:{ icon:'🌳', title:'Moments simples, amour infini', body:'Les plus beaux moments sont souvent les plus simples. Juste toi, moi, et l\'amour entre nous.' }},
-  { type:'video', src:'videos/video10.mp4', thumb:'photos/photo5.jpg', caption:'Nuit étoilée 🌟',
+  { type:'video', src:'videos/video10.mp4', thumb:'photos/photo5.jpg', caption:'Ces moments magiques de rire partagé, nos âmes qui s\'enlacent dans la joie, créant des souvenirs impérissables de notre bonheur commun',
     love:{ icon:'🌟', title:'Compter les étoiles avec toi', body:'Chaque étoile du ciel pâlit comparée à la lumière que tu apportes dans ma vie.' }},
-  { type:'video', src:'videos/video11.mp4', thumb:'photos/photo1.jpg', caption:'Promenade main dans la main 🚶',
+  { type:'video', src:'videos/video11.mp4', thumb:'photos/photo1.jpg', caption:'Ces câlins passionnés et tendres, nos corps enlacés dans la chaleur de notre amour, ces moments d\'intimité qui nourrissent notre âme',
     love:{ icon:'🚶', title:'Marcher avec toi', body:'Peu importe où on va, du moment que c\'est avec toi, je suis chez moi.' }},
 ];
 
@@ -73,32 +73,228 @@ const MEDIA = [
 ══════════════════════════════════════════════════════════════ */
 const QUESTIONS = [
   {
-    q: 'Quelle est ma couleur préférée ?',
-    opts: ['Bleu', 'Rose', 'Vert', 'Jaune'],
-    ok: 1,
-    emoji: '🎨',
-    bravo: 'C\'est toi qui dis !'
-  },
-  {
-    q: 'Quel est mon film préféré ?',
-    opts: ['Titanic', 'Avatar', 'Inception', 'Interstellar'],
-    ok: 2,
-    emoji: '🎬',
-    bravo: 'Exactement !'
-  },
-  {
-    q: 'Combien de fois ai-je dit « je t\'aime » cette semaine ?',
-    opts: ['5 fois', 'Plus que je ne peux compter', '10 fois', 'Chaque jour'],
+    q: 'Quel surnom j utilise le plus souvent pour t\'appeler ?',
+    opts: ['Mon étoile', 'Babe / Mon bébé', 'Ma chérie', 'Chouchou'],
     ok: 1,
     emoji: '💕',
-    bravo: 'Bien sûr !'
+    bravo: 'Oui ! "Babe" et "mon bébé" à chaque message !'
   },
   {
-    q: 'Quel est mon lieu préféré avec toi ?',
-    opts: ['Au cinéma', 'Partout, tant que tu es là', 'À la plage', 'En montagne'],
+    q: 'Qu\'est-ce que je t\'ai dit le soir où j\'ai oublié de vérifier la monnaie ?',
+    opts: ['Je pensais à autre chose', 'J\'étais concentré sur toi 😭', 'J\'étais distrait par le téléphone', 'J\'avais faim'],
     ok: 1,
-    emoji: '📍',
-    bravo: 'Tu le sais 💕'
+    emoji: '💸',
+    bravo: 'Exactement ! Il était tellement perdu dans ses pensées de toi !'
+  },
+  {
+    q: 'Qu\'est-ce que j\'avait mangé le soir-là (le soir de la monnaie oubliée) ?',
+    opts: ['Du riz au gras', 'De l\'attiéké', 'Des spaghettis avec Péya', 'Du foufou'],
+    ok: 2,
+    emoji: '🍝',
+    bravo: 'Des spaghettis avec Péya ! Un classique chez lui.'
+  },
+  {
+    q: 'Quel plat j\'ai souvent mangé selon nos conversations ?',
+    opts: ['Du riz jollof', 'De l\'indomie', 'De l\'avocat', 'Du couscous'],
+    ok: 2,
+    emoji: '🥑',
+    bravo: 'L\'avocat ! Eve te demandait souvent ce que tu mangeais et tu répondais avocat.'
+  },
+  {
+    q: 'Quel plat on avait prévu de cuisiner ensemble si son voyage ne tenait pas ?',
+    opts: ['Du riz sauce', 'De l\'indomie', 'Du couscous', 'De l\'attiéké poisson'],
+    ok: 2,
+    emoji: '🍲',
+    bravo: 'Du couscous ! Il avait même promis d\'acheter les approvisionnements.'
+  },
+  {
+    q: 'Dans quelle activité je suis très impliqué à l\'église ?',
+    opts: ['La prière du vendredi', 'La chorale / La Jeunesse', 'Le groupe d\'intercession', 'Les retraites'],
+    ok: 1,
+    emoji: '🎶',
+    bravo: 'La chorale et la Jeunesse ! C\'est pour ça qu\'il rentrait tard parfois.'
+  },
+  {
+    q: 'Quelle promesse je t\'ai faite après la matinée tragique du 10 mai 2025 ?',
+    opts: ['De toujours m\'appeler en premier', 'De ne plus jamais me faire souffrir ni pleurer', 'De couper tout contact avec ses amies', 'De venir me voir tous les jours'],
+    ok: 1,
+    emoji: '🫂',
+    bravo: 'Il a promis que ça n\'arriverait plus et qu\'on surmonterait tout ensemble 🫂'
+  },
+  {
+    q: 'Quel est le surnom affectueux je t\'ai donné ?',
+    opts: ['Ma p\'tite can', 'Ma gazelle', 'Mon soleil', 'Ma perle'],
+    ok: 0,
+    emoji: '🎋',
+    bravo: '"Ma p\'tite can" et même "Sugar Can" 😂   !'
+  },
+  {
+    q: 'réaction lors de ton anniversaire le 5 mai 2025 ?',
+    opts: ['Il a oublié', 'Il m\'a envoyé un long message touchant', 'Il m\'a appelée', 'Il est venu me voir'],
+    ok: 1,
+    emoji: '🎂',
+    bravo: 'Il t\'a écrit un magnifique message : "Ton sourire illumine mes journées" !'
+  },
+  {
+    q: 'Quel message tu  m\'avait envoyé pour mon anniversaire le 30 avril 2025 ?',
+    opts: ['Un simple "joyeux anniversaire"', 'Un long message émouvant sur deux ans ensemble', 'Un poème qu\'il avait écrit', 'Une vidéo surprise'],
+    ok: 1,
+    emoji: '💌',
+    bravo: 'Deux ans de relation célébrés avec des mots magnifiques ❤️'
+  },
+  {
+    q: 'Quand j\'ai dit "je me sens vide", que m\'a répondu Ht ?',
+    opts: ['Il n\'a rien dit', 'Il m\'a dit qu\'il voulait venir mais la pluie l\'en empêchait', 'Il m\'a dit de dormir', 'Il m\'a appelée immédiatement'],
+    ok: 1,
+    emoji: '🌧️',
+    bravo: 'Il voulait venir mais la pluie et le délestage ont tout compliqué ce soir-là.'
+  },
+  {
+    q: 'Qu\'est-ce qui m\'excite le plus chez Ht selon ce que j\'ai dit ?',
+    opts: ['Sa douceur uniquement', 'Un mélange de romance et de brutalité, surtout contre le mur', 'Sa patience', 'Ses mots doux'],
+    ok: 1,
+    emoji: '❤️‍🔥',
+    bravo: 'Tu l\'as dit toi-même ! "Un peu de romance, un peu de brutalité" 😏'
+  },
+  {
+    q: 'Quelle série on regardait ensemble avec passion ?',
+    opts: ['Game of Thrones', 'Merlin', 'Young Sheldon', 'Squid Game'],
+    ok: 1,
+    emoji: '📺',
+    bravo: 'Merlin ! Et tu avais même pris de l\'avance sur lui en secret 😂'
+  },
+  {
+    q: 'J\'avais pris de l\'avance sur lui dans Merlin. À quelle saison j\'en étais selon lui ?',
+    opts: ['Saison 1', 'Saison 2', 'Saison 3', 'Saison 4'],
+    ok: 2,
+    emoji: '🧙',
+    bravo: 'Il disait saison 3 pour te taquiner, et toi tu l\'accusais de tricher 😂'
+  },
+  {
+    q: 'Quel projet de canal Telegram on avait créé ensemble ?',
+    opts: ['Un canal de musique', 'Un canal de films nigérians en français', 'Un canal de cuisine', 'Un canal de sport'],
+    ok: 1,
+    emoji: '📱',
+    bravo: 'Le canal de feuilletons / films Hibo Film ! Et vous avez bien galéré ensemble 😂'
+  },
+  {
+    q: 'Quelle série j\'avais cherchée sur Telegram et qu\'on avait regardée ?',
+    opts: ['Squid Game', 'La casa de papel', 'FROM', 'Peaky Blinders'],
+    ok: 2,
+    emoji: '🎬',
+    bravo: 'FROM ! Et le canal avait fini par être supprimé pour droits d\'auteur 😅'
+  },
+  {
+    q: 'Comment Ht m\'appelle quand il est tendre et romantique ?',
+    opts: ['Mon amour / Ma vie / Mon bébé', 'Ma princesse', 'Mon ange', 'Ma chérie'],
+    ok: 0,
+    emoji: '🌹',
+    bravo: '"Mon amour", "ma vie", "mon bébé"... il cumule tout !'
+  },
+  {
+    q: 'Qu\'est-ce qu\'Ht répond toujours quand je lui demande comment il va ?',
+    opts: ['"Très bien merci"', '"Je rends grâce" / "Dieu merci"', '"Ça peut aller"', '"Fatigué mais bien"'],
+    ok: 1,
+    emoji: '🙏',
+    bravo: '"Je rends grâce" ou "Dieu merci" — il est reconnaissant au quotidien !'
+  },
+  {
+    q: 'Qu\'est-ce que j\'avais remarqué qu\'Ht avait laissé chez moi ?',
+    opts: ['Ses affaires', 'Son odeur sur les draps', 'Sa veste', 'Son téléphone'],
+    ok: 1,
+    emoji: '🛏️',
+    bravo: 'Son odeur sur les draps 😩 Ça en dit long sur ce moment-là !'
+  },
+  {
+    q: 'Quel logiciel Ht m\'avait partagé via des fichiers torrent ?',
+    opts: ['Microsoft Office', 'Adobe Photoshop', 'Final Cut Pro', 'AutoCAD'],
+    ok: 1,
+    emoji: '💻',
+    bravo: 'Adobe Photoshop ! Il prenait soin de te donner les outils dont tu avais besoin.'
+  },
+  {
+    q: 'Qu\'est-ce qu\'Ht m\'a dit quand je ne voulais pas manger ?',
+    opts: ['Il m\'ignorait', 'Il insistait : "cherche quelque chose à manger d\'abord"', 'Il me disait que c\'est bon', 'Il me cuisinait quelque chose'],
+    ok: 1,
+    emoji: '🍽️',
+    bravo: 'Toujours pareil : "Faut chercher quelque chose à manger, après on parlera de moi."'
+  },
+  {
+    q: 'Quel est le domaine de formation / métier d\'Ht ?',
+    opts: ['Comptabilité', 'Programmation / Informatique', 'Droit', 'Médecine'],
+    ok: 1,
+    emoji: '🖥️',
+    bravo: 'Programmeur et informaticien ! Et je disais "Avoir confiance à un programmeur c\'est boire du poison" 😂'
+  }, 
+  {
+    q: 'Qu\'est-ce que je lui ai dit quand il faisait la bouche sur le sexe ?',
+    opts: ['"T\'es un homme, joue ton rôle !"', '"Sois doux avec moi"', '"On peut attendre"', '"Je comprends"'],
+    ok: 0,
+    emoji: '💪',
+    bravo: '"T\'es un homme oubien ? Donc joue ton rôle !" — tu savais ce que tu voulais 😂'
+  },
+  {
+    q: 'Qu\'est-ce qu\'on préparait souvent quand on cuisinait ensemble ?',
+    opts: ['Du riz blanc', 'Des spaghettis / indomie / couscous', 'Du foufou', 'De la soupe'],
+    ok: 1,
+    emoji: '👩‍🍳',
+    bravo: 'Spaghettis, indomie, couscous... la cuisine simple mais ensemble !'
+  },
+  {
+    q: 'Quelle application on utilisait beaucoup en dehors de Telegram ?',
+    opts: ['Instagram', 'WhatsApp', 'TikTok', 'Snapchat'],
+    ok: 1,
+    emoji: '📲',
+    bravo: 'WhatsApp ! Et quand l\'un n\'était plus connecté là-bas, ça créait des inquiétudes.'
+  },
+  {
+    q: 'Qu\'est-ce qu\'Ht mangeait souvent comme plat rapide ?',
+    opts: ['Du pain beurre', 'Des spaghettis comme d\'hab 😢', 'Du riz', 'Des oeufs'],
+    ok: 1,
+    emoji: '🍜',
+    bravo: '"Spago comme d\'hab" — son repas de survie quand tu n\'étais pas là 😅'
+  },
+  {
+    q: 'Que faisait Ht à l\'église en dehors de la chorale ?',
+    opts: ['Rien d\'autre', 'Il était aussi dans la Jeunesse', 'Il faisait le son', 'Il lisait la Bible'],
+    ok: 1,
+    emoji: '⛪',
+    bravo: 'La chorale ET la Jeunesse ! Un homme bien occupé spirituellement.'
+  },
+  {
+    q: 'Quel aveu touchant Ht m\'a-t-il fait sur la raison pour laquelle il ne venait pas quand il devait ?',
+    opts: ['"Je suis occupé"', '"Dès que tu viens, j\'ai plus envie de sortir et je rate mes engagements"', '"Je préfère rester chez moi"', '"Je suis fatigué"'],
+    ok: 1,
+    emoji: '🏠',
+    bravo: '"Quand tu viens, j\'ai même pas envie de sortir" — tu étais sa priorité absolue !'
+  }, 
+  {
+    q: 'Quand son téléphone a été volé, qu\'est-ce que j\'ai fait immédiatement ?',
+    opts: ['Rien', 'J\'ai appelé le numéro plusieurs fois et laissé un SMS', 'J\'ai prévenu la police', 'J\'ai changé de sujet'],
+    ok: 1,
+    emoji: '📵',
+    bravo: 'Tu as appelé et laissé un SMS, et proposé d\'utiliser "Localiser mon appareil" !'
+  },
+  {
+    q: 'Quel geste romantique Ht a-t-il eu pendant mon absence ?',
+    opts: ['Il m\'a envoyé des fleurs', 'Il m\'a envoyé une vidéo de nos souvenirs avec un message touchant', 'Il est venu me surprendre', 'Il a chanté pour moi'],
+    ok: 1,
+    emoji: '🎞️',
+    bravo: '"Je voulais juste partager ce souvenir avec toi… quand on était si jeunes et insouciants."'
+  }, 
+  {
+    q: 'Comment tu finissait souvent les nuits dans nos conversations ?',
+    opts: ['"Bye"', '"N\'oublie pas de prier avant de dormir ❤️"', '"À demain"', '"Je t\'aime, bonne nuit"'],
+    ok: 1,
+    emoji: '🌙',
+    bravo: '"N\'oublie pas de prier avant de dormir ❤️" — sa petite habitude du soir !'
+  },
+  {
+    q: 'Qu\'est-ce qu\'Ht a finalement avoué vouloir vraiment de moi, au fond ?',
+    opts: ['Rien de précis', '"Je te veux toi, faire de toi ma famille, ma femme"', '"Juste être ami"', '"Une relation sans pression"'],
+    ok: 1,
+    emoji: '👰',
+    bravo: '"Je te veux toi, je veux faire de toi ma famille, ma femme. Depuis le début, depuis toujours." 💍'
   },
 ];
 
@@ -277,7 +473,7 @@ const TOTAL_PAGES = PAGE_IDS.length;
 const CURTAIN_MSGS = {
   2: '💕 Ferme les yeux…\nun instant rien que pour toi…',
   3: '🌌 Bienvenue dans notre galaxie\nde souvenirs…',
-  4: '🌟 Ces souvenirs plein les yeux !\nNow… prouve que tu me connais 😏',
+  4: '🌟 Ces souvenirs plein les yeux !\nNow… la preuve que je te connais 😏',
   5: '🎉 Bravo ! Tu as tout réussi !\nUne dernière surprise t\'attend…',
 };
 
