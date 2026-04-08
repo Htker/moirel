@@ -1057,6 +1057,18 @@ function startConfetti(){
 /* ══════════════════════════════════════════════════════════════
    7. SONS + MUSIQUE
 ══════════════════════════════════════════════════════════════ */
+const MUSIC_PLAYLIST = [
+  'musics/TONY X - Tôkoloto (feat. Marc Strong).mp3',
+  'musics/Tony X - Aicha [Official music video].mp3',
+  'musics/YaKnou - BADGIRL (Lyrics).mp3',
+  'musics/YaKnou - Robinet [Clip Officiel].mp3',
+  'musics/YaKnou_ft_Tony_X_Cristaux_de_menthe_Visualizer_by_J_Breezy.mp3',
+];
+
+function getRandomMusic(){
+  return MUSIC_PLAYLIST[Math.floor(Math.random() * MUSIC_PLAYLIST.length)];
+}
+
 let audioCtx;
 function getAC(){ if(!audioCtx) audioCtx=new(window.AudioContext||window.webkitAudioContext)(); return audioCtx; }
 function playSound(type){
@@ -1069,8 +1081,30 @@ function playSound(type){
 }
 
 let musicOn=false;
-function autoPlayMusic(){ const a=document.getElementById('bg-music');a.volume=.22;a.play().then(()=>{musicOn=true;const b=document.getElementById('music-btn');if(b)b.textContent='🔇 Couper';}).catch(()=>{}); }
-function toggleMusic(){ const a=document.getElementById('bg-music'),b=document.getElementById('music-btn');if(musicOn){a.pause();musicOn=false;b.textContent='🎵 Musique';}else{a.play();musicOn=true;b.textContent='🔇 Couper';} }
+function autoPlayMusic(){ 
+  const a=document.getElementById('bg-music');
+  a.src=getRandomMusic();
+  a.volume=.22;
+  a.play().then(()=>{
+    musicOn=true;
+    const b=document.getElementById('music-btn');
+    if(b)b.textContent='🔇 Couper';
+  }).catch(()=>{});
+}
+
+function toggleMusic(){ 
+  const a=document.getElementById('bg-music'),b=document.getElementById('music-btn');
+  if(musicOn){
+    a.pause();
+    musicOn=false;
+    b.textContent='🎵 Musique';
+  }else{
+    a.src=getRandomMusic();
+    a.play();
+    musicOn=true;
+    b.textContent='🔇 Couper';
+  }
+}
 
 function resetToFirstTime(){
   try{ localStorage.removeItem(LS_UNLOCKED); }catch(_){}
