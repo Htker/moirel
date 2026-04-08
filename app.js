@@ -190,6 +190,12 @@ const QUESTIONS = [
     ok: 0,
     emoji: '🌹',
     bravo: '"Mon amour", "ma vie", "mon bébé"... il cumule tout !'
+  }, {
+    q: 'Comment Ht m\'appelle quand il n est pas tendre et romantique ?',
+    opts: ['Mon amour / Ma vie / Mon bébé', 'Moirel', 'Mon ange', 'Ma chérie'],
+    ok: 1,
+    emoji: '🌹',
+    bravo: '"Momooooooooooooooooooooooo !'
   },
   {
     q: 'Qu\'est-ce qu\'Ht répond toujours quand je lui demande comment il va ?',
@@ -257,7 +263,7 @@ const QUESTIONS = [
   {
     q: 'Que faisait Ht à l\'église en dehors de la chorale ?',
     opts: ['Rien d\'autre', 'Il était aussi dans la Jeunesse', 'Il faisait le son', 'Il lisait la Bible'],
-    ok: 1,
+    ok: 0,
     emoji: '⛪',
     bravo: 'La chorale ET la Jeunesse ! Un homme bien occupé spirituellement.'
   },
