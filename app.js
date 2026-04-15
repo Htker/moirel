@@ -293,14 +293,7 @@ const QUESTIONS = [
     ok: 1,
     emoji: '🌙',
     bravo: '"N\'oublie pas de prier avant de dormir ❤️" — sa petite habitude du soir !'
-  },
-  {
-    q: 'Qu\'est-ce qu\'Ht a finalement avoué vouloir vraiment de moi, au fond ?',
-    opts: ['Rien de précis', '"Je te veux toi, faire de toi ma famille, ma femme"', '"Juste être ami"', '"Une relation sans pression"'],
-    ok: 1,
-    emoji: '👰',
-    bravo: '"Je te veux toi, je veux faire de toi ma famille, ma femme. Depuis le début, depuis toujours." 💍'
-  },
+  }, 
 ];
 
 /* ══════════════════════════════════════════════════════════════
